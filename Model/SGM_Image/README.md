@@ -1,5 +1,11 @@
 # SGM Image Model
 
+## Finetune the model
+- Configure the paths in configs/multi_temporal_crop_classification.py
+  ```
+  cd ./configs
+  ```
+- Change the path in Lines 20, 55, and 63.
 - Run the following command to train the model
   ```
   mim train mmsegmentation configs/multi_temporal_crop_classification.py --launcher pytorch --gpus 4
