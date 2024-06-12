@@ -51,4 +51,4 @@ We follow the instruction of [NASA IMPACT](https://github.com/NASA-IMPACT/hls-fo
 14. `pip install datasets` 
 
 ### Acknowledgment
-- [NSAS-IMPACT]([https://github.com/mangushev/mtad-gat](https://github.com/NASA-IMPACT/hls-foundation-os/))
+- [NSAS-IMPACT](https://github.com/NASA-IMPACT/hls-foundation-os/)
