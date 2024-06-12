@@ -9,3 +9,9 @@
 ### Requirement
 - pandas == 1.4.2
 - torch == 1.12.1
+
+
+### Acknowledgment
+- [Multivariate Time-series Anomaly Detection via Graph Attention Network](https://github.com/mangushev/mtad-gat)
+- [DAG-GNN: DAG Structure Learning with Graph Neural Networks](https://github.com/fishmoon1234/DAG-GNN)
+- [Diffusion Convolutional Recurrent Neural Network: Data-Driven Traffic Forecasting](https://github.com/liyaguang/DCRNN)
