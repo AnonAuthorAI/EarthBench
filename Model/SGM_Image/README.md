@@ -1,5 +1,5 @@
 # SGM Image Model
-We upload the pretrained model in the [Google Drive]().
+We upload the pretrained model in the [Google Drive](https://drive.google.com/file/d/18LtEEF2mu9VJEzGl2oJghusqOTiGXB9I/view?usp=sharing).
 
 ## Finetune the model
 - Configure the paths in configs/multi_temporal_crop_classification.py
