@@ -35,8 +35,18 @@ The raw satellite images are derived from the NASA Harmonized Landsat Sentinel-2
 
 ## Data Matching & Prerpocessing
 
+**Scripts used for data matching and preprocessing:**
+- [**data_countyname_to_lonlat.ipynb**](https://github.com/AnonAuthorAI/EarthBench/blob/main/Data/Image/data_countyname_to_lonlat.ipynb): extract latitude and longitude based on the given county name using `geocoder`.
+- [**data_chip_to_lonlat.ipynb**](https://github.com/AnonAuthorAI/EarthBench/blob/main/Data/Image/data_chip_to_lonlat.ipynb): extract latitude and longitude of the top-left & bottom-right corner of each chip from the GeoTIFF file.
+- [**data_matching_spliting.ipynb**](https://github.com/AnonAuthorAI/EarthBench/blob/main/Data/Image/data_matching_spliting.ipynb): match the chips with the counties and split the dataset into train and test sets (5-folds) based on the county.
+
+**Implementation Details:**
 - **Chip Initialization:** We first extract a set of 5,000 chips based on samples from the USDA CDL to ensure a representative sampling across the continental United States.
 - **Spatial Alignment:** We then spatially align these chips with the 238 counties contained in the ERA5 data based on latitude and longitude. Specifically, for each chip-county pair, we check the average difference in latitude and longitude between the center point of the chip and the county. If the difference is less than 1, we assign the chip to the corresponding county. If multiple counties met the criteria, we assign the chip to the nearest county to ensure no overlap between chips within each county, thus preventing data leakage when performing county-based train/test split.
 - **Temporal Alignment:** For each chip, we retrieve 3 satellite images from the NASA HLS dataset evenly distributed in time from March to September 2022 to capture the ground view at different stages of the season.
 - **Image Quality Check:** We perform image quality check on each chip using the metadata, discarding any chip with clouds, cloud shadows, or missing values.
 - **Final Dataset:** After all matching and filtering, we obtain **3138** valid chips corresponding to **169** counties.
+
+## Data Split
+
+We split the dataset into 5 folds based on the county to ensure that the train and test sets do not contain chips from the same county. The 5-fold split is saved in the [`data_splits`](https://github.com/AnonAuthorAI/EarthBench/tree/main/Data/Image/data_splits) directory. Each entry in the split txt file is a chip name.
