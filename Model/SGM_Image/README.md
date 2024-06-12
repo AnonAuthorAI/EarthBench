@@ -9,7 +9,7 @@ We upload the pretrained model in the [Google Drive]().
 - Change the path in Lines 20, 55, and 63.
 - Run the following command to train the model
   ```
-  mim train mmsegmentation configs/multi_temporal_crop_classification.py --launcher pytorch --gpus 4
+  mim train mmsegmentation configs/multi_temporal_crop_classification.py
   ```
 
   Multi-gpu training can be run by adding `--launcher pytorch --gpus <number of gpus>`
