@@ -1,5 +1,5 @@
 # SGM Image Model
-The SGM model for the image segmentation is obtained by fine-tuning the [Geospatial Foundation Model](https://huggingface.co/ibm-nasa-geospatial/Prithvi-100M/tree/main), whose encoder and decoder are based on vision transformers. We upload the fine-tuned model in the [anonymous folder](https://drive.google.com/file/d/18LtEEF2mu9VJEzGl2oJghusqOTiGXB9I/view?usp=sharing).
+The SGM model for the image segmentation is obtained by fine-tuning the [Geospatial Foundation Model](https://huggingface.co/ibm-nasa-geospatial/Prithvi-100M/tree/main), whose encoder and decoder are based on vision transformers. We upload the fine-tuned model in the [anonymous folder](https://drive.google.com/drive/folders/1XvPIPN6vtS3M0oYwCui4VVVHPHlwDMG3?usp=sharing).
 
 ## Finetune the model
 - Configure the paths in configs/multi_temporal_crop_classification.py
