@@ -1,5 +1,5 @@
 # SGM Image Model
-We upload the pretrained model in the [Google Drive](https://drive.google.com/file/d/18LtEEF2mu9VJEzGl2oJghusqOTiGXB9I/view?usp=sharing).
+The SGM model for the image segmentation is obtained by fine-tuning the [Geospatial Foundation Model](https://huggingface.co/ibm-nasa-geospatial/Prithvi-100M/tree/main), whose encoder and decoder are based on vision transformer. We upload the fine-tuned model in the [anonymous folder](https://drive.google.com/file/d/18LtEEF2mu9VJEzGl2oJghusqOTiGXB9I/view?usp=sharing).
 
 ## Finetune the model
 - Configure the paths in configs/multi_temporal_crop_classification.py
@@ -51,4 +51,5 @@ We follow the instruction of [NASA IMPACT](https://github.com/NASA-IMPACT/hls-fo
 14. `pip install datasets` 
 
 ### Acknowledgment
-- [NSAS-IMPACT](https://github.com/NASA-IMPACT/hls-foundation-os/)
+- [ibm-nasa-geospatial](https://huggingface.co/datasets/ibm-nasa-geospatial/multi-temporal-crop-classification)
+- [hls-foundation-os](https://github.com/NASA-IMPACT/hls-foundation-os/)
